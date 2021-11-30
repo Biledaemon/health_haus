@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :plans, only: [:index, :show, :new, :create]  do
     resources :contracts, only: [:new, :create]
   end
+  get "search", to: "pages#search"
 end
