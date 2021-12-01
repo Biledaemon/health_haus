@@ -24,7 +24,7 @@
     )
     plan.save!
 
-    puts "saved correctly"
+    puts "Plans saved correctly"
   end
 
   contract = Contract.new(
@@ -32,4 +32,5 @@
     plan: Plan.last
   )
   contract.save!
+  puts "Contracts saved correctly"
 end
