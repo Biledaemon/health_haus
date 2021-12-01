@@ -7,7 +7,7 @@ class PlansController < ApplicationController
   end
 
   def show
-    @plan = Contract.new
+    @contract = Contract.new
   end
 
   def new
