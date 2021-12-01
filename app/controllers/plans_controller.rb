@@ -29,6 +29,7 @@ class PlansController < ApplicationController
 
   def search_results
     raise
+    #if @plan.user(params)
   end
 
   private
