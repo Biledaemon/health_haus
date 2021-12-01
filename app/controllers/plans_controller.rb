@@ -23,6 +23,14 @@ class PlansController < ApplicationController
     end
   end
 
+  def search
+    @plan = Plan.new
+  end
+
+  def search_results
+    raise
+  end
+
   private
 
   def plan_params
