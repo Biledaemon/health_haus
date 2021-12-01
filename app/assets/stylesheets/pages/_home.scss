@@ -1,1 +1,62 @@
 // Specific CSS for your home-page
+
+.container {
+  display: flex;
+}
+
+.banner {
+  background-color: #F4F0EA;
+  width: 100%;
+  padding: 100px 0px 100px;
+  display: flex;
+}
+
+.banner-welcome {
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-text {
+  padding: 40px 0px 30px;
+}
+#image-banner {
+  height: 300;
+}
+
+.button-green {
+  padding:10px 24px;
+	border-radius:6px;
+	font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+	color:#21496F;
+  background: #E0EEA8;
+  width: 120px;
+  height: 48px;
+  text-decoration: none;
+}
+
+.cards-landing {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.card-landing {
+  font-family: 'Poppins', sans-serif;
+  padding:50px 50px;
+  background: #F4F0EA;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-landing {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
