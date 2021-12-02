@@ -2,20 +2,28 @@
   <div class="row">
     <div class="col">
       <div class="heading">
-        <h2> <strong>Your Monthly Contribution</strong></h2>
+        <h2> <strong>Your Plan:</strong></h2>
       </div>
-      <div class="card-plan mb-3">
-        <div class="card d-flex align-items-center text-align-left">
-            <ul>
-              <li> <%= @plan.price %> /per month </li>
-              <li> amount for her </li>
-              <li> amount for him </li>
-            </ul>
-        </div>
+      <div class="card-category-name mb-3">
+        <h3><%= @plan.provider %></h3>
+      </div>
+      <div class="card-category-description mb-3">
+        <h3><%= @plan.description %></h3>
+      </div>
+      <div class="card-category mb-3">
+        <h2><strong><%= @plan.price %></strong></h2>
+      </div>
+      <div class="card-category align-items-center text-align-left">
+          <ul>
+            <li> Max Amount Covered: $<%= @plan.max_amount %> </li>
+            <li> Deductible: $<%= @plan.deductible %> </li>
+            <li> Coverage: <%= @plan.coverage_percent %> </li>
+          </ul>
+      </div>
       </div>
       <div class="col">
         <div class="plan-card-action">
-          <%= link_to 'Review Contract', plan_contracts_path(@plan), method: :post, id:"create-contract", class: "btn btn-primary" %>
+          <%= link_to 'Review Contract', new_plan_contract_path(@plan), id:"new-contract", class: "btn btn-primary" %>
         </div>
       </div>
     </div>
@@ -23,23 +31,21 @@
 </div>
 
 <div class="container">
-  <h2> <strong>The Best Guaranties</strong></h2>
+  <h2> <strong>The Fine Print</strong></h2>
   <div class="row">
     <div class="col">
       <div class="card border-secondary mb-3" style="max-width: 18rem;">
-        <div class="card-header"> <strong>for the eyes</strong>🤓</div>
+        <div class="card-header"> <strong>Eyes</strong>🤓</div>
           <div class="card-body text-secondary">
-            <h5 class="card-title">Secondary card title</h5>
-              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
           </div>
         </div>
       </div>
 
       <div class="col">
         <div class="card border-secondary mb-3" style="max-width: 18rem;">
-          <div class="card-header"><strong>for the dentist</strong>😁</div>
+          <div class="card-header"><strong>Dentist</strong>😁</div>
             <div class="card-body text-secondary">
-              <h5 class="card-title">Secondary card title</h5>
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
           </div>
@@ -47,9 +53,8 @@
 
       <div class="col">
         <div class="card border-secondary mb-3" style="max-width: 18rem;">
-          <div class="card-header"><strong>for a specialist</strong>🕵️‍♂️</div>
+          <div class="card-header"><strong>Specialist</strong>🕵️‍♂️</div>
             <div class="card-body text-secondary">
-              <h5 class="card-title">Secondary card title</h5>
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
           </div>
@@ -62,9 +67,8 @@
   <div class="row">
       <div class="col">
         <div class="card border-secondary mb-3" style="max-width: 18rem;">
-          <div class="card-header"><strong>for surgeries</strong>👩‍⚕️</div>
+          <div class="card-header"><strong>Surgeries</strong>👩‍⚕️</div>
             <div class="card-body text-secondary">
-              <h5 class="card-title">Secondary card title</h5>
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
           </div>
@@ -72,9 +76,8 @@
 
       <div class="col">
         <div class="card border-secondary mb-3" style="max-width: 18rem;">
-          <div class="card-header"><strong>for alternative med</strong>🌳</div>
+          <div class="card-header"><strong>Alternative Medicine</strong>🌳</div>
             <div class="card-body text-secondary">
-              <h5 class="card-title">Secondary card title</h5>
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
           </div>
@@ -82,9 +85,8 @@
 
       <div class="col">
         <div class="card border-secondary mb-3" style="max-width: 18rem;">
-          <div class="card-header"><strong>for wellnes</strong>🏃‍♀️</div>
+          <div class="card-header"><strong>Wellnes</strong>🏃‍♀️</div>
             <div class="card-body text-secondary">
-              <h5 class="card-title">Secondary card title</h5>
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
           </div>
