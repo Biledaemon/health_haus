@@ -4,17 +4,17 @@
     <div class="row cards pb-3">
       <% s.each do |plan| %>
         <div class="col-3-sm">
-          <div class="cards-trip">
-            <div>
-                <h2> <strong><%= plan.category %></strong></h2>
-                <p><strong>Monthly Cost: $<%= plan.price %></strong></p>
-                <p><strong>Max Amount Covered: $<%= plan.max_amount %></strong></p>
-                <p><strong> Coverage: <%= plan.coverage_percent %></strong></p>
-                <p><strong>Deductible: $<%= plan.deductible %></strong></p>
-              </div>
+          <div class="card align-items-center" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><strong><%= plan.category %></strong></h5>
+              <p><strong>Monthly Cost: $<%= plan.price %></strong></p>
+              <p><strong>Max Amount Covered: $<%= plan.max_amount %></strong></p>
+              <p><strong> Coverage: <%= plan.coverage_percent %></strong></p>
+              <p><strong>Deductible: $<%= plan.deductible %></strong></p>
               <div class="plan-card-action">
-               <%= link_to 'View Details', plan_path(plan) %>
+                <%= link_to 'View Details', plan_path(plan), class: "btn btn-primary align-items-center" %>
               </div>
+            </div>
           </div>
         </div>
       <%end%>
