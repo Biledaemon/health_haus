@@ -1,57 +1,94 @@
 <div class="container">
-  <div class="plan-information d-flex">
-    <div class="card-trip mb-3">
+  <div class="row">
+    <div class="col">
+      <div class="heading">
         <h2> <strong>Your Monthly Contribution</strong></h2>
+      </div>
+      <div class="card-plan mb-3">
         <div class="card d-flex align-items-center text-align-left">
-          <ul>
-            <li> <%= @plan.price %> /per month </li>
-            <li> amount for her </li>
-            <li> amount for him </li>
-          </ul>
+            <ul>
+              <li> <%= @plan.price %> /per month </li>
+              <li> amount for her </li>
+              <li> amount for him </li>
+            </ul>
         </div>
-        <div class="plan-card-action align-items-rigth">
+      </div>
+      <div class="col">
+        <div class="plan-card-action">
           <%= link_to 'Review Contract', plan_contracts_path(@plan), method: :post, id:"create-contract", class: "btn btn-primary" %>
         </div>
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="row cards pb-3">
-    <div class="col-3-sm">
-      <div class="plan-complements">
-        <h2> <strong>The Best Guaranties</strong></h2>
-          <div class="cards d-flex">
-            <div class="card border-secondary mb-3" style="max-width: 18rem;">
-              <div class="card-header text-center"><strong>for the eyes</strong>🤓</div>
-              <div class="card-body text-secondary">
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-              </div>
-              <div class="card border-secondary mb-3" style="max-width: 18rem;">
-              <div class="card-header text-center"><strong>for the dentist</strong>😁</div>
-              <div class="card-body text-secondary">
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-              </div>
-              <div class="card border-secondary mb-3" style="max-width: 18rem;">
-              <div class="card-header text-center"><strong>for a specialist</strong>🕵️‍♂️</div>
-              <div class="card-body text-secondary">
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-              </div>
-              <div class="card border-secondary mb-3" style="max-width: 18rem;">
-              <div class="card-header text-center"><strong>for surgeries</strong>👩‍⚕️</div>
-              <div class="card-body text-secondary">
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-              </div>
-              <div class="card border-secondary mb-3" style="max-width: 18rem;">
-              <div class="card-header text-center"> <strong>for alternative med</strong>🌳</div>
-              <div class="card-body text-secondary">
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-              </div>
-              <div class="card border-secondary mb-3" style="max-width: 18rem;">
-              <div class="card-header text-center"><strong>for wellnes</strong>🏃‍♀️</div>
-              <div class="card-body text-secondary">
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+<div class="container">
+  <h2> <strong>The Best Guaranties</strong></h2>
+  <div class="row">
+    <div class="col">
+      <div class="card border-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header"> <strong>for the eyes</strong>🤓</div>
+          <div class="card-body text-secondary">
+            <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header"><strong>for the dentist</strong>😁</div>
+            <div class="card-body text-secondary">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            </div>
+          </div>
+        </div>
+
+      <div class="col">
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header"><strong>for a specialist</strong>🕵️‍♂️</div>
+            <div class="card-body text-secondary">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col">
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header"><strong>for surgeries</strong>👩‍⚕️</div>
+            <div class="card-body text-secondary">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
           </div>
       </div>
-    </div>
+
+      <div class="col">
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header"><strong>for alternative med</strong>🌳</div>
+            <div class="card-body text-secondary">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            </div>
+          </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header"><strong>for wellnes</strong>🏃‍♀️</div>
+            <div class="card-body text-secondary">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div
