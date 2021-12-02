@@ -1,0 +1,23 @@
+<div class = "container">
+  <h2> For Individuals </h2>
+  <p>We have a few more questions about you and what you want for your health insurance.</p>
+  <div class="row">
+        <div class="col-12">
+          <hr>
+          <div class="form">
+            <%= simple_form_for(@plan, url: search_results_plans_path) do |f| %>
+              <p> 1. How much do you want to <strong>pay each month? </strong></p>
+              <%= f.input :price, placeholder: 'price you would want' %>
+              <p> 2. Upto how much do you want to be <strong>covered? </strong></p>
+              <%= f.input :max_amount, placeholder: 'your preferred coverage' %>
+              <p> 3. How much do you want to <strong>pay for deductible? </strong></p>
+              <%= f.input :deductible, placeholder: 'your deductible' %>
+              <p> 4. Do you want <strong>100% coverage </strong> or upto how much? min 75%</p>
+              <%= f.input :coverage_percent, placeholder: 'your total coverage', collection: 75..100, id: "example"  %>
+              <%= f.submit "Search my Coverage!", class: "btn btn-primary"%>
+            <% end %>
+          </div>
+      </div>
+    </div>
+ </div>
+</div>

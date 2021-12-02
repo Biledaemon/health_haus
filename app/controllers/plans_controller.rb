@@ -7,7 +7,7 @@ class PlansController < ApplicationController
   end
 
   def show
-    @plan = Contract.new
+    @contract = Contract.new
   end
 
   def new
@@ -21,6 +21,15 @@ class PlansController < ApplicationController
     else
       render :new
     end
+  end
+
+  def search
+    @plan = Plan.new
+  end
+
+  def search_results
+    raise
+    #if @plan.user(params)
   end
 
   private

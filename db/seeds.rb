@@ -5,7 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-4.times do
+puts "destroying contracts"
+Contract.destroy_all
+puts "destroying users"
+User.destroy_all
+puts "destroying plans"
+Plan.destroy_all
+
+puts "creating new seeds"
+3.times do
   user = User.new(email: Faker::Internet.email, password: 123_456,
                   first_name: Faker::Artist.name,
                   last_name: Faker::Creature::Dog.name,
@@ -14,7 +22,7 @@
                   dob: Faker::Date.birthday(min_age: 18, max_age: 65),
                   budget: Faker::Number.decimal(l_digits: 4, r_digits: 2))
   user.save!
-  3.times do
+  2.times do
     plan = Plan.new(
       provider: Faker::Company.name,
       price: rand(100..500),
@@ -24,7 +32,7 @@
     )
     plan.save!
 
-    puts "saved correctly"
+    puts "Plans saved correctly"
   end
 
   contract = Contract.new(
@@ -32,4 +40,5 @@
     plan: Plan.last
   )
   contract.save!
+  puts "Contracts saved correctly"
 end
