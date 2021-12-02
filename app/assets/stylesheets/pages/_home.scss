@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 
-.container {
+.container-flex {
   display: flex;
 }
 
@@ -20,6 +20,7 @@
 }
 #image-banner {
   height: 300;
+  padding-left: 50px;
 }
 
 .button-green {
@@ -34,29 +35,38 @@
   width: 120px;
   height: 48px;
   text-decoration: none;
+  margin-top: 20px;
 }
 
 .cards-landing {
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  width: 100%;
 }
 
 .card-landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Poppins', sans-serif;
-  padding:50px 50px;
+  font-weight: 700;
+  padding: 50px 50px;
   background: #F4F0EA;
   text-decoration: none;
   border-radius: 6px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
-.card-landing {
+.card-landing-text {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  color:#21496F;
   text-decoration: none;
+  font-size: 19px;
 }
