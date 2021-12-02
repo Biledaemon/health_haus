@@ -28,8 +28,19 @@ class PlansController < ApplicationController
   end
 
   def search_results
-    raise
-    #if @plan.user(params)
+    # raise
+    @plans = Plan.all
+    # price
+    if params[:plan][:price].present? && params[:plan][:coverage_percent].present? && params[:plan][:max_amount].present? && params[:plan][:deductible].present?
+      # @plans = @plans.by_price(params[:plan][:price])
+      @plans = @plans.where('price >= ?', params[:plan][:price].to_i).where('coverage_percent >= ?', params[:plan][:coverage_percent].to_i).where('max_amount >= ?', params[:plan][:max_amount].to_i).where('deductible >= ?', params[:plan][:deductible].to_i)
+    # coverage_percent
+    # max_amount
+    # deductible
+      render 'results'
+    else
+      raise "incomplete parameters"
+    end
   end
 
   private

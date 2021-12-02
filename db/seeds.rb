@@ -22,13 +22,13 @@ puts "creating new seeds"
                   dob: Faker::Date.birthday(min_age: 18, max_age: 65),
                   budget: Faker::Number.decimal(l_digits: 4, r_digits: 2))
   user.save!
-  2.times do
+  6.times do
     plan = Plan.new(
       provider: Faker::Company.name,
-      price: rand(100..500),
-      max_amount: rand(8000..10_000),
-      coverage_percent: rand(85..100),
-      deductible: rand(50..100)
+      price: rand(100..125),
+      max_amount: rand(800..850),
+      coverage_percent: rand(80..100),
+      deductible: rand(75..100)
     )
     plan.save!
 
