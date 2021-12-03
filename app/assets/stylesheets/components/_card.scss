@@ -20,6 +20,15 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.card-body-show {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 .card-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
