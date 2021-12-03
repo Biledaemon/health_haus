@@ -8,7 +8,7 @@
             <div class="form">
               <%= simple_form_for(@plan, url: search_results_plans_path) do |f| %>
                 <p> 1. How much do you want to <strong>pay each month? </strong></p>
-                <%= f.input :price, placeholder: 'price you would want' %>
+                <%= f.input :price, as: :integer, placeholder: 'price you would want' %>
                 <p> 2. Upto how much do you want to be <strong>covered? </strong></p>
                 <%= f.input :max_amount, placeholder: 'your preferred coverage' %>
                 <p> 3. How much do you want to <strong>pay for deductible? </strong></p>

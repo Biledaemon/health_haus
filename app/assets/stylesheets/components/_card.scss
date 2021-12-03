@@ -6,4 +6,32 @@
   margin-top: 50px;
   margin-bottom: 50px;
   width: 100%;
+  
+.cards {
+  display: flex;
+}
+
+.card-body {
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-plans {
+  display: grid;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.card-body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
 }
