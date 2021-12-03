@@ -28,19 +28,27 @@ class PlansController < ApplicationController
   end
 
   def search_results
-    # raise
+    session["results"] = "user_results"
     @plans = Plan.all
-    # price
     if params[:plan][:price].present? && params[:plan][:coverage_percent].present? && params[:plan][:max_amount].present? && params[:plan][:deductible].present?
       # @plans = @plans.by_price(params[:plan][:price])
       @plans = @plans.where('price >= ?', params[:plan][:price].to_i).where('coverage_percent >= ?', params[:plan][:coverage_percent].to_i).where('max_amount >= ?', params[:plan][:max_amount].to_i).where('deductible >= ?', params[:plan][:deductible].to_i)
-    # coverage_percent
-    # max_amount
-    # deductible
-      render 'results'
+      render 'index'
     else
-      raise "incomplete parameters"
+      flash.alert = 'Please pass all 4 required inputs'
+      render :search
+      # render 'search', notice: 'Please pass all 4 required inputs'
     end
+  end
+
+  def import
+    # Obtain the 4 params obtained from user 'Search'
+    # Scrape from queplan.cl
+    # GET the price (convert to $)
+    # GET the coverage_percent,
+    # GET the max_amount (convert to $),
+    # GET deductible (comvert to $)
+    # Create an array of plans for user (individual, couple or Family) Cron job? LIMIT = 100 plans
   end
 
   private

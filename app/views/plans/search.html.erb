@@ -13,7 +13,7 @@
                 <%= f.input :max_amount, placeholder: 'your preferred coverage' %>
                 <p> 3. How much do you want to <strong>pay for deductible? </strong></p>
                 <%= f.input :deductible, placeholder: 'your deductible' %>
-                <p> 4. Do you want <strong>100% coverage </strong> or upto how much? min 75%</p>
+                <p> 4. Do you want <strong>100% coverage </strong> or upto how much? (min 75%)</p>
                 <%= f.input :coverage_percent, placeholder: 'your total coverage', collection: 75..100, id: "example"  %>
                 <%= f.submit "Search my Coverage!", class: "btn btn-primary"%>
               <% end %>
