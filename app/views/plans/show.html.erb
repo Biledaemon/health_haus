@@ -1,48 +1,36 @@
 <div class="container">
-  <div class="heading">
-    <h2> <strong>Your Plan:</strong></h2>
+  <div class="header mt-5 mw-100">
+    <h2>Your Plan</h2>
   </div>
-  <div class="row align-items-start">
-    <div class="col sm-6">
-      <div class="card-body ">
-        <h5 class="card-title"><strong><%= @plan.provider %></strong></h5>
-      </div>
-    </div>
-
-    <div class="col sm-6">
+    <div class="grid align-items-start mb-3 g-col-6">
       <div class="card-body">
-        <h5 class="card-title"><strong><%= @plan.description %></strong></h5>
+        <h5 style= "font-family: 'Roboto', sans-serif; font-weight: 700;"><%= @plan.provider %></h5>
+        <h5 style= "font-family: 'Roboto', sans-serif; font-weight: 300;">Gold Elite 2000 Plan</h5>
       </div>
     </div>
 
-    <div class="col sm-6">
-      <div class="card-body">
-      <h5 class="card-title"><strong>$<%= @plan.price %></strong></h5>
-      </div>
-    </div>
-
-    <div class="col sm-6">
-        <ul>
-            <li> Max Amount Covered: $<%= @plan.max_amount %> </li>
-            <li> Deductible: $<%= @plan.deductible %> </li>
-            <li> Coverage: <%= @plan.coverage_percent %> </li>
-          </ul>
-    </div>
-
-    <div class="col sm-6">
-      <div class="plan-card-action">
+    <div class="g-col-6">
+      <div class="card-body-show pt-4 mb-4">
+        <h5 class="card-title" style= "font-family: 'Roboto', sans-serif; font-weight: 700;"><strong>$<%= @plan.price %> per month</strong></h5>
+        <ul style= "font-family: 'Roboto', sans-serif; font-weight: 300;">
+          <li> Max Amount Covered: $<%= @plan.max_amount %> </li>
+          <li> Deductible: $<%= @plan.deductible %> </li>
+          <li> Coverage: <%= @plan.coverage_percent %> </li>
+        </ul>
+        <div class="plan-card-action">
          <%= link_to 'Review Contract', new_plan_contract_path(@plan), id:"new-contract", class: "button-green" %>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <h2> <strong>The Fine Print</strong></h2>
+  <h2>The Fine Print</h2>
   <div class="row">
     <div class="col">
-      <div class="card border-secondary mb-3 text-center" style="max-width: 18rem;">
-        <div class="card-header"> <strong>Eyes</strong>🤓</div>
+      <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <div class="card-header"> <strong>Eyes</strong> 🤓</div>
           <div class="card-body text-secondary">
             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
           </div>
@@ -50,8 +38,8 @@
       </div>
 
       <div class="col">
-        <div class="card border-secondary mb-3 text-center" style="max-width: 18rem;">
-          <div class="card-header"><strong>Dentist</strong>😁</div>
+        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+          <div class="card-header"><strong>Dentist</strong> 😁</div>
             <div class="card-body text-secondary">
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
@@ -59,8 +47,8 @@
         </div>
 
       <div class="col">
-        <div class="card border-secondary mb-3 text-center" style="max-width: 18rem;">
-          <div class="card-header"><strong>Specialist</strong>🕵️‍♂️</div>
+        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+          <div class="card-header"><strong>Specialists</strong> 🕵️‍♂️</div>
             <div class="card-body text-secondary">
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
@@ -73,8 +61,8 @@
 <div class="container">
   <div class="row">
       <div class="col">
-        <div class="card border-secondary mb-3 text-center" style="max-width: 18rem;">
-          <div class="card-header"><strong>Surgeries</strong>👩‍⚕️</div>
+        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+          <div class="card-header"><strong>Surgeries</strong> 👩‍⚕️</div>
             <div class="card-body text-secondary">
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
@@ -82,8 +70,8 @@
       </div>
 
       <div class="col">
-        <div class="card border-secondary mb-3 text-center" style="max-width: 18rem;">
-          <div class="card-header"><strong>Alternative Medicine</strong>🌳</div>
+        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+          <div class="card-header"><strong>Alternative Medicine</strong> 🌳</div>
             <div class="card-body text-secondary">
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
@@ -91,8 +79,8 @@
       </div>
 
       <div class="col">
-        <div class="card border-secondary mb-3 text-center" style="max-width: 18rem;">
-          <div class="card-header"><strong>Wellnes</strong>🏃‍♀️</div>
+        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+          <div class="card-header"><strong>Wellness</strong> 🏃‍♀️</div>
             <div class="card-body text-secondary">
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             </div>
