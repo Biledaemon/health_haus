@@ -1,23 +1,26 @@
 <div class="container">
-  <h3><strong>These plans are the best fit for you #NAME</strong></h3>
-  <% @plans.each_slice(2) do |s| %>
-    <div class="row cards pb-3">
-      <% s.each do |plan| %>
-        <div class="col-3-sm">
-          <div class="card align-items-center" style="width: 18rem;">
+  <div class="row mt-5">
+    <h2>These plans best fit your needs.</h2>
+  </div>
+
+  <div class="card-layout">
+    <% @plans.each_slice(2) do |s| %>
+      <div class="card-plans" >
+        <% s.each do |plan| %>
+          <div class="card-plans">
             <div class="card-body">
-              <h5 class="card-title"><strong><%= plan.category %></strong></h5>
-              <p><strong>Monthly Cost: $<%= plan.price %></strong></p>
-              <p><strong>Max Amount Covered: $<%= plan.max_amount %></strong></p>
-              <p><strong> Coverage: <%= plan.coverage_percent %></strong></p>
-              <p><strong>Deductible: $<%= plan.deductible %></strong></p>
-              <div class="plan-card-action">
-                <%= link_to 'View Details', plan_path(plan), class: "btn btn-primary align-items-center" %>
+              <p><strong><%= plan.category %></strong></p>
+              <p>Monthly Cost: <strong>$<%= plan.price %></strong></p>
+              <p>Max Amount Covered: <strong>$<%= plan.max_amount %></strong></p>
+              <p> Coverage: <strong><%= plan.coverage_percent %></strong></p>
+              <p>Deductible: <strong>$<%= plan.deductible %></strong></p>
+              <div class="plan-card-action" style="justify-items: end;">
+                <%= link_to 'View Details', plan_path(plan), class: "button-green" %>
               </div>
             </div>
           </div>
-        </div>
-      <%end%>
-    </div>
-  <% end %>
+        <%end%>
+      </div>
+    <% end %>
+  </div>
 </div>
