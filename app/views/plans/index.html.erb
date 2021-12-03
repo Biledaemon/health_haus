@@ -10,10 +10,11 @@
           <div class="card-plans">
             <div class="card-body">
               <p><strong><%= plan.category %></strong></p>
+              <p>Provider: <strong><%= plan.provider %></strong></p>
               <p>Monthly Cost: <strong>$<%= plan.price %></strong></p>
               <p>Max Amount Covered: <strong>$<%= plan.max_amount %></strong></p>
-              <p> Coverage: <strong><%= plan.coverage_percent %></strong></p>
               <p>Deductible: <strong>$<%= plan.deductible %></strong></p>
+              <p>Coverage: <strong><%= plan.coverage_percent %>%</strong></p>
               <div class="plan-card-action" style="justify-items: end;">
                 <%= link_to 'View Details', plan_path(plan), class: "button-green" %>
               </div>
@@ -22,5 +23,10 @@
         <%end%>
       </div>
     <% end %>
+  </div>
+  <div class="container">
+    <div class="row mt-2">
+  <%= link_to 'Back to Search', search_plans_path, class: "button-green" %>
+  </div>
   </div>
 </div>
