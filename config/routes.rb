@@ -9,5 +9,10 @@ Rails.application.routes.draw do
       post "search_results"
     end
   end
-  # get "search", to: "pages#search"
+
+  resources :contracts, only: [:destroy, :index] do
+    member do
+      get 'confirm'
+    end
+  end
 end
