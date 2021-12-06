@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :contracts, only: [:destroy, :index] do
+    resources :payments, only: :new
     member do
       get 'confirm'
     end

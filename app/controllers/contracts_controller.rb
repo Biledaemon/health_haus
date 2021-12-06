@@ -11,15 +11,31 @@ class ContractsController < ApplicationController
   end
 
   def create
-    @contract = Contract.new
-    @contract.plan = @plan
-    @contract.user = current_user
-    @contract.save
-    redirect_to confirm_contract_path(@contract)
+    plan = Plan.find(params[:plan_id])
+    contract = Contract.create!(plan: name, amount: plan.price, user: current_user)
+
+    session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      line_items: [{
+        name: plan.name,
+        amount: plan.price,
+        currency: 'usd',
+        quantity: 1
+      }],
+      success_url: contract_url(contract),
+      cancel_url: contract_url(contract)
+    )
+
+    contract.update(checkout_session_id: session.id)
+    redirect_to new_order_payment_path(order)
   end
 
   def confirm
     @contract = Contract.find(params[:id])
+  end
+
+  def show
+    @contract = current_user.contract.find(params[:id])
   end
 
   private

@@ -29,6 +29,9 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
+gem 'money-rails', '~>1.12'
+gem 'stripe'
+
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
