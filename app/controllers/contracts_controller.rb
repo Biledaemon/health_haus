@@ -12,7 +12,7 @@ class ContractsController < ApplicationController
 
   def create
     plan = Plan.find(params[:plan_id])
-    contract = Contract.create!(plan: name, amount: plan.price, user: current_user)
+    contract = Contract.create!(plan: plan.provider, amount: plan.price, state: 'pending', user: current_user)
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row py-4">
+    <div class="col">
+      <h1>Order #<%= @contract.id %> <small><span class="badge badge-primary"><%= @contract.state %></span></small></h1>
+      <ul class="list-unstyled">
+        <li><strong>ISSUED ON</strong> <%= @contract.created_at.to_date %></li>
+        <li><strong>TEDDY</strong> <%= @contract.plan.provider %></li>
+        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @contract.amount %></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
