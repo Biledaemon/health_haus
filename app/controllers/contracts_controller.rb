@@ -15,7 +15,7 @@ class ContractsController < ApplicationController
     @contract.plan = @plan
     @contract.user = current_user
     @contract.save
-    redirect_to confirm_contract_path(@contract)
+    redirect_to current_user
   end
 
   def confirm
