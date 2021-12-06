@@ -1,0 +1,10 @@
+meta_product_name: "Health Haus"
+meta_title: "Health Haus- The simplest way to get health insurance"
+meta_description: "We believe choosing a healthcare plan should be easy and transparent.
+
+Just let us know what your needs are and we’ll browse thousands of plans to offer you the
+one that fits best.
+
+No hidden fees. No talking to lawyers. It's that simple."
+meta_image: "banner-people.svg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
