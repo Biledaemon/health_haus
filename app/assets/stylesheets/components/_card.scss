@@ -45,3 +45,31 @@
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
 }
+
+.category-icons {
+  height: 160px;
+}
+
+.cards-landing {
+  display: flex;
+  flex-flow: row;
+  justify-items: center;
+}
+
+.card-landing {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: color 0.3s;
+}
+
+div.card-landing:hover {
+  background-image: #E0EEA8;
+}
+
+
+.explanation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
