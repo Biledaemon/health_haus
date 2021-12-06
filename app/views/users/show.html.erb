@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="card-profile">
+    <div class="row d-flex text-center align-items-center mt-3">
+      <div class="col-md-6 text-right ">
+        <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638398157/Health%20Haus/avatar-health-haus_no0cr5.svg" %>
+      </div>
+      <div class="col-md-6 text-left">
+        <h2 class="name-tag p-3"> <%= full_name(current_user) %></h2>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row d-flex text-center align-items-center mt-3">
+      <div class="col-md-6">
+        <h3><strong>Your Information</strong></h3>
+        <ul>
+          <p>Date of Birth: <%= @user.dob %></p>
+          <p>E-mail: <%=@user.email %></p>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3><strong>Your Plan</strong></h3>
+        <ul>
+          <p>Plan Name:</p>
+          <p>Provider:</p>
+        </ul>
+      </div>
+        <div class="col-md-12 text-right mt-2">
+          <%= link_to "Details", new_user_registration_path, class:"button-green" %>
+        </div>
+    </div>
+    <br></br>
+    <div class="row d-flex text-center align-items-center mt-3">
+      <div class="col-md-6">
+      </div>
+      <div class="col-md-6">
+        <h3><strong>Plan Summary</strong></h3>
+        <ul>
+          <p>Monthly Cost: $150</p>
+          <p>Max Amount Covered:$800</p>
+          <p>Deductible: $80</p>
+          <p>Coverage: 95%</p>
+        </ul>
+      </div>
+      <div class="col-md-12 text-right mt-2">
+        <%= link_to "Refund", new_user_registration_path, class:"button-green" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,7 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638398157/Health%20Haus/avatar-health-haus_no0cr5.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "My Profile", "#", class: "dropdown-item" %>
+              <%= link_to "My Profile", current_user, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
