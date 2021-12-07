@@ -1,50 +1,45 @@
-<div class="container">
-  <div class="card-profile">
-    <div class="row d-flex text-center align-items-center mt-3">
-      <div class="col-md-6 text-right ">
-        <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638398157/Health%20Haus/avatar-health-haus_no0cr5.svg" %>
-      </div>
-      <div class="col-md-6 text-left">
-        <h2 class="name-tag p-3"> <%= full_name(current_user) %></h2>
-      </div>
-    </div>
-    <hr>
 
-    <div class="row d-flex text-center align-items-center mt-3">
-      <div class="col-md-6">
-        <h3><strong>Your Information</strong></h3>
-        <ul>
-          <p>Date of Birth: <%= @user.dob %></p>
-          <p>E-mail: <%=@user.email %></p>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <h3><strong>Your Plan</strong></h3>
-        <ul>
-          <p>Plan Name:</p>
-          <p>Provider:</p>
-        </ul>
-      </div>
-        <div class="col-md-12 text-right mt-2">
-          <%= link_to "Details", new_user_registration_path, class:"button-green" %>
-        </div>
+<div class="container" id="profile-container">
+  <div class="row px-5 justify-content-center">
+    <div class="col">
+      <div style= "margin: 10px;"><%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638398157/Health%20Haus/avatar-health-haus_no0cr5.svg" %></div>
+      <div><h3 style= "font-weight: 900; font-size: 24px"> <%= full_name(current_user) %></h3></div>
     </div>
-    <br></br>
-    <div class="row d-flex text-center align-items-center mt-3">
-      <div class="col-md-6">
-      </div>
-      <div class="col-md-6">
-        <h3><strong>Plan Summary</strong></h3>
-        <ul>
-          <p>Monthly Cost: $150</p>
-          <p>Max Amount Covered:$800</p>
-          <p>Deductible: $80</p>
-          <p>Coverage: 95%</p>
-        </ul>
-      </div>
+  </div>
+  <hr>
+
+  <div class="row px-5 pt-2">
+    <div class="col">
+      <h3>Your Information</h3>
+      <ul>
+        <p>Date of Birth: <%= @user.dob %></p>
+        <p>E-mail: <%=@user.email %></p>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Your Plan</h3>
+      <ul>
+        <p>Plan Name:</p>
+        <p>Provider:</p>
+      </ul>
+    </div>
       <div class="col-md-12 text-right mt-2">
-        <%= link_to "Refund", new_user_registration_path, class:"button-green" %>
+        <%= link_to "See Your Contract", new_user_registration_path, class:"button-green" %>
       </div>
+  </div>
+  <br></br>
+  <div class="row px-5 pt-2">
+    <div class="col">
+      <h3>Plan Summary</h3>
+      <ul>
+        <p><i class="bi bi-coin"></i> Monthly Cost: <b>$150</b></p>
+        <p><i class="bi bi-arrow-up-square"></i> Max Amount Covered: <b>$800</b></p>
+        <p><i class="bi bi-scissors"></i> Deductible: <b>$80</b></p>
+        <p><i class="bi bi-bandaid"></i> Coverage: <b>95%</b></p>
+      </ul>
+    </div>
+    <div class="col-md-12 text-right mt-2">
+      <%= link_to "Contact a Representative", new_user_registration_path, class:"button-green" %>
     </div>
   </div>
 </div>
