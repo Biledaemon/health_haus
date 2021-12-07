@@ -7,8 +7,12 @@
   font-family: 'Roboto', sans-serif;
 	color:#21496F;
   background: #E0EEA8;
-  text-decoration: none;
   margin-top: 20px;
+  transition: color 0.2s;
+  &:hover {
+    background-color: #C679A6;
+    color: white;
+  }
 }
 
 
@@ -20,7 +24,7 @@
   text-align: center;
   font-family: 'Roboto', sans-serif;
 	color:#21496F;
-  background: whit;
+  background: white;
   width: 120px;
   height: 48px;
   text-decoration: none;
@@ -31,4 +35,18 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color:#21496F;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  color:#21496F;
+  font-size: 21px;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color:#21496F;
+  font-size: 18px;
 }

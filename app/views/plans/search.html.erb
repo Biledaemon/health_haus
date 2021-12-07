@@ -1,23 +1,26 @@
-<div class = "container" style="display: flex; flex-direction: row; justify-content: center;">
-  <div style="background-color: white; width: 800px; margin-top: 50px; padding: 50px 30px; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
-    <h2> For Individuals </h2>
-    <p>We have a few more questions about what you want for your health insurance.</p>
-    <div class="row">
-          <div class="col-12">
-            <hr>
-            <div class="form">
-              <%= simple_form_for(@plan, url: search_results_plans_path) do |f| %>
-                <p> 1. How much do you want to <strong>pay each month? </strong></p>
-                <%= f.input :price, as: :integer, placeholder: 'Monthly price' %>
-                <p> 2. Up to how much do you want to be <strong>covered? </strong></p>
-                <%= f.input :max_amount, placeholder: 'Maximum coverage' %>
-                <p> 3. How much do you want to <strong>pay as a deductible? </strong></p>
-                <%= f.input :deductible, placeholder: 'Deductible' %>
-                <p> 4. Do you want <strong>100% coverage </strong> or up to how much?</p>
-                <%= f.input :coverage_percent, placeholder: 'Total coverage, in percent', collection: 75..100, id: "example"  %>
-                <%= f.submit "Search Plans!", class: "button-green"%>
-              <% end %>
-            </div>
+<div style= "background-image: url('https://res.cloudinary.com/hugeyeti/image/upload/v1638830968/Health%20Haus/bacgkround-forms_coehdr.svg'); background-size: cover;
+  background-position: center;">
+  <div class= "container mb-5" style= "display: flex; flex-direction: row; justify-content: center;">
+    <div style="background-color: white; width: 800px; margin-top: 50px; padding: 50px 30px; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+      <h2> For Individuals </h2>
+      <p>We have a few more questions about what you want for your health insurance.</p>
+      <div class="row">
+            <div class="col-12">
+              <hr>
+              <div class="form">
+                <%= simple_form_for(@plan, url: search_results_plans_path) do |f| %>
+                  <p> 1. How much do you want to <strong>pay each month? </strong></p>
+                  <%= f.input :price, as: :integer, placeholder: 'Monthly price' %>
+                  <p> 2. Up to how much do you want to be <strong>covered? </strong></p>
+                  <%= f.input :max_amount, placeholder: 'Maximum coverage' %>
+                  <p> 3. How much do you want to <strong>pay as a deductible? </strong></p>
+                  <%= f.input :deductible, placeholder: 'Deductible' %>
+                  <p> 4. Do you want <strong>100% coverage </strong> or up to how much?</p>
+                  <%= f.input :coverage_percent, placeholder: 'Total coverage, in percent', collection: 75..100, id: "example"  %>
+                  <%= f.submit "Search Plans!", class: "button-green"%>
+                <% end %>
+              </div>
+          </div>
         </div>
       </div>
     </div>

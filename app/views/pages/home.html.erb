@@ -1,5 +1,5 @@
 
-<div class="banner">
+<div class="banner-1">
   <div class="container">
     <div class="container-flex">
       <div class="banner-welcome">
@@ -7,38 +7,42 @@
         <br>
         <p style="font-family: 'Poppins', sans-serif; font-weight: 400; color:#21496F;">Tell us what your needs are and in less than 5 minutes you will get the best health insurance plan.</p>
         <p style="font-family: 'Poppins', sans-serif; font-weight: 400; color:#21496F;">No hidden fees. Don't talk to lawyers. It's that easy.</p>
-        <%= link_to "Start", new_user_registration_path, class: "button-green" %>
+        <%= link_to "Get Started", new_user_registration_path, class: "button-green" %>
       </div>
       <div id="image-banner"> <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638378799/Health%20Haus/banner-people_nfwq7l.svg" %> </div>
     </div>
   </div>
 </div>
 
-<div class="container mt-5">
-  <div class="explanation-section">
-    <h2 style="font-family: 'Poppins', sans-serif; font-weight: 900; color:#21496F; font-size: 32px;">How does it work?</h2>
-  </div>
-  <div class="explanation-section">
-    <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638815553/Health%20Haus/how_it_works_vx5jgy.svg", style: "max-height: 450px;" %>
-  </div>
-</div>
-
-<div class="container mt-5">
-  <div class="explanation-section">
-    <h2 style="font-family: 'Poppins', sans-serif; font-weight: 900; color:#21496F; font-size: 32px;">Explore plans!</h2>
-  </div>
-  <div class="cards-landing">
-      <div class="card-landing">
-        <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638808201/Health%20Haus/individual_whshxb.svg", class: "category-icons" %>
-        <%= link_to "FOR INDIVIDUALS", search_plans_path, class: "card-landing-text" %>
-      </div>
-      <div class="card-landing">
-        <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638808201/Health%20Haus/couple_ziankp.svg", class: "category-icons" %>
-        <%= link_to "FOR COUPLES", search_plans_path, class: "card-landing-text" %>
-      </div>
-      <div class="card-landing">
-        <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638808201/Health%20Haus/family_yflsqr.svg", class: "category-icons" %>
-        <%= link_to "FOR FAMILIES", search_plans_path, class: "card-landing-text" %>
-      </div>
+<div class="banner-2">
+  <div class="container">
+    <div class="explanation-section">
+      <h2 style="font-family: 'Poppins', sans-serif; font-weight: 900; color:#21496F; font-size: 32px;">How does it work?</h2>
     </div>
+    <div class="explanation-section">
+      <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638837791/Health%20Haus/Group_31_mcihkn.svg", style: "max-height: 450px;" %>
+    </div>
+  </div>
+ </div>
+
+<div class="banner-3">
+  <div class="container">
+    <div class="explanation-section">
+      <h2 style="font-family: 'Poppins', sans-serif; font-weight: 900; color:#21496F; font-size: 32px;">Find the right plan!</h2>
+    </div>
+    <div class="cards-landing">
+        <div class="card-landing">
+          <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638808201/Health%20Haus/individual_whshxb.svg", class: "category-icons" %>
+          <%= link_to "FOR INDIVIDUALS", search_plans_path, class: "card-landing-text" %>
+        </div>
+        <div class="card-landing">
+          <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638808201/Health%20Haus/couple_ziankp.svg", class: "category-icons" %>
+          <%= link_to "FOR COUPLES", search_plans_path, class: "card-landing-text" %>
+        </div>
+        <div class="card-landing">
+          <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638808201/Health%20Haus/family_yflsqr.svg", class: "category-icons" %>
+          <%= link_to "FOR FAMILIES", search_plans_path, class: "card-landing-text" %>
+        </div>
+      </div>
+  </div>
 </div>

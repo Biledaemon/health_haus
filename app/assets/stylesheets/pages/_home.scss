@@ -4,10 +4,24 @@
   display: flex;
 }
 
-.banner {
+.banner-1 {
   background-color: #F4F0EA;
   width: 100%;
-  padding: 100px 0px 70px;
+  padding: 100px 0px 80px;
+  display: flex;
+}
+
+.banner-2 {
+  background-color: #b4cfe4;
+  width: 100%;
+  padding: 70px 0px 70px;
+  display: flex;
+}
+
+.banner-3 {
+  background-color: white;
+  width: 100%;
+  padding: 80px 0px 80px;
   display: flex;
 }
 
@@ -36,6 +50,11 @@
   height: 48px;
   text-decoration: none;
   margin-top: 20px;
+  transition: color 0.3s;
+  &:hover {
+    background-color: #C679A6;
+    text-decoration: none;
+  }
 }
 
 .cards-landing {
