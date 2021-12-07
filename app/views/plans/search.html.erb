@@ -17,7 +17,27 @@
                   <%= f.input :deductible, placeholder: 'Deductible' %>
                   <p> 4. Do you want <strong>100% coverage </strong> or up to how much?</p>
                   <%= f.input :coverage_percent, placeholder: 'Total coverage, in percent', collection: 75..100, id: "example"  %>
-                  <%= f.submit "Search Plans!", class: "button-green"%>
+                  <button type="button" class="btn button-green" data-toggle="modal" data-target="#exampleModal">
+                    Search Plans
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel"> 🤖<strong>Analyzing thousands of options...</strong></h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p> 🎉 We found <strong>6</strong> plan options that match your needs!</p>
+                        </div>
+                        <div class="modal-footer">
+                          <%= f.submit "Go to Plans", class: "button-green"%>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 <% end %>
               </div>
           </div>
