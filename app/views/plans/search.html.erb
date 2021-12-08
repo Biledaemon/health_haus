@@ -3,20 +3,16 @@
   <div class= "container mb-5" style= "display: flex; flex-direction: row; justify-content: center;">
     <div style="background-color: white; width: 800px; margin-top: 50px; padding: 50px 30px; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
       <h2> For Individuals </h2>
-      <p>We have a few more questions about what you want for your health insurance.</p>
+      <p>We have a few questions about what you want for your health insurance.</p>
       <div class="row">
             <div class="col-12">
               <hr>
               <div class="form">
                 <%= simple_form_for(@plan, url: search_results_plans_path) do |f| %>
-                  <p> 1. How much do you want to <strong>pay each month? </strong></p>
-                  <%= f.input :price, as: :integer, placeholder: 'Monthly price' %>
-                  <p> 2. Up to how much do you want to be <strong>covered? </strong></p>
-                  <%= f.input :max_amount, placeholder: 'Maximum coverage' %>
-                  <p> 3. How much do you want to <strong>pay as a deductible? </strong></p>
-                  <%= f.input :deductible, placeholder: 'Deductible' %>
-                  <p> 4. Do you want <strong>100% coverage </strong> or up to how much?</p>
-                  <%= f.input :coverage_percent, placeholder: 'Total coverage, in percent', collection: 75..100, id: "example"  %>
+                  <%= f.input :price, as: :integer, label: "1. How much do you want to pay each month?", placeholder: 'Monthly price' %>
+                  <%= f.input :max_amount, label: "2. Up to how much do you want to be covered?", placeholder: 'Maximum coverage' %>
+                  <%= f.input :deductible, label: "3. How much do you want to pay as a deductible?",placeholder: 'Deductible' %>
+                  <%= f.input :coverage_percent, label:"4. Do you want 100% coverage or up to how much?", placeholder: 'Total coverage, in percent', collection: 75..100, id: "example"  %>
                   <button type="button" class="btn button-green" data-toggle="modal" data-target="#exampleModal">
                     Search Plans
                   </button>
@@ -33,7 +29,7 @@
                           <p> 🎉 We found <strong>6</strong> plan options that match your needs!</p>
                         </div>
                         <div class="modal-footer">
-                          <%= f.submit "Go to Plans", class: "button-green"%>
+                          <%= f.submit "Go to Plans", class: "btn button-green"%>
                         </div>
                       </div>
                     </div>
