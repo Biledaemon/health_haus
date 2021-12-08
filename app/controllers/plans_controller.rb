@@ -30,35 +30,24 @@ class PlansController < ApplicationController
 
   def search_results
     session["results"] = "user_results"
-    @plans = Plan.all
-    if params[:plan][:price].present? && params[:plan][:coverage_percent].present? && params[:plan][:max_amount].present? && params[:plan][:deductible].present?
-      # @plans = @plans.by_price(params[:plan][:price])
-      @plans = @plans.where('price >= ?', params[:plan][:price].to_i).where('coverage_percent >= ?', params[:plan][:coverage_percent].to_i).where('max_amount >= ?', params[:plan][:max_amount].to_i).where('deductible >= ?', params[:plan][:deductible].to_i)
+    if params[:ids].present?
+      @plans = Plan.where(id: params[:ids].split(','))
       render 'index'
     else
-      flash.alert = 'Please pass all 4 required inputs'
-      render :search
-      # render 'search', notice: 'Please pass all 4 required inputs'
+      @plans = Plan.all
+      if params[:plan][:price].present? && params[:plan][:coverage_percent].present? && params[:plan][:max_amount].present? && params[:plan][:deductible].present?
+        # @plans = @plans.by_price(params[:plan][:price])
+        @plans = @plans.where('price <= ?', params[:plan][:price].to_i).where('coverage_percent >= ?', params[:plan][:coverage_percent].to_i).where('max_amount >= ?', params[:plan][:max_amount].to_i).where('deductible <= ?', params[:plan][:deductible].to_i)
+        render 'index'
+      else
+        flash.alert = 'Please pass all 4 required inputs'
+        render :search
+        # render 'search', notice: 'Please pass all 4 required inputs'
+      end
     end
   end
 
-  def import
-    # Obtain the 4 params obtained from user 'Search'
-    # Scrape from queplan.cl
-    # GET the price (convert to $)
-    # GET the coverage_percent,
-    # GET the max_amount (convert to $),
-    # GET deductible (comvert to $)
-    # Create an array of plans for user (individual, couple or Family) Cron job? LIMIT = 100 plans
-  end
-
   private
-
-  # def load_csv
-  #   CSV.foreach(@csv_file) do |row|
-  #     @jobs << Plan.new(provider: row[0], price: row[1], deductible: row[2], max_amount: row[3, coverage_percent: row[4])
-  #   end
-  # end
 
   def plan_params
     params.require(:plan).permit(:price, :expiration, :max_amount, :coverage_percent, :deductible, :external_id, :provider, :description, :category)
