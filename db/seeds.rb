@@ -5,14 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts "destroying contracts"
-Contract.destroy_all
-puts "destroying users"
-User.destroy_all
-puts "destroying plans"
-Plan.destroy_all
+require 'csv'
 
-puts "creating new seeds"
+puts "Creating plans..."
+csv_file = File.join(__dir__, 'jobs.csv')
+plans = CSV.foreach(csv_file, headers: true).map do |row|
+  Plan.create!(row)
+end
+
+puts "Creating new users and contracts..."
 3.times do
   user = User.new(email: Faker::Internet.email, password: 123_456,
                   first_name: Faker::Artist.name,
@@ -22,23 +23,11 @@ puts "creating new seeds"
                   dob: Faker::Date.birthday(min_age: 18, max_age: 65),
                   budget: Faker::Number.decimal(l_digits: 4, r_digits: 2))
   user.save!
-  6.times do
-    plan = Plan.new(
-      provider: Faker::Company.name,
-      price: rand(100..125),
-      max_amount: rand(800..850),
-      coverage_percent: rand(80..100),
-      deductible: rand(75..100)
-    )
-    plan.save!
-
-    puts "Plans saved correctly"
-  end
 
   contract = Contract.new(
     user: user,
-    plan: Plan.last
+    plan: plans.sample
   )
   contract.save!
-  puts "Contracts saved correctly"
+  puts "Contracts saved correctly..."
 end

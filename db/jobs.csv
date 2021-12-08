@@ -1,3 +1,4 @@
+provider,price,max_amount,deductible,coverage_percent
 MetLife,28.347,100,2,60
 Integramédica,13.885,25,0,60
 Consorcio,22.858,0,0,100

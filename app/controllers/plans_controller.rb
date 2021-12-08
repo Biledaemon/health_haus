@@ -1,3 +1,4 @@
+
 class PlansController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :set_plan, only: :show
@@ -52,6 +53,12 @@ class PlansController < ApplicationController
   end
 
   private
+
+  # def load_csv
+  #   CSV.foreach(@csv_file) do |row|
+  #     @jobs << Plan.new(provider: row[0], price: row[1], deductible: row[2], max_amount: row[3, coverage_percent: row[4])
+  #   end
+  # end
 
   def plan_params
     params.require(:plan).permit(:price, :expiration, :max_amount, :coverage_percent, :deductible, :external_id, :provider, :description, :category)
