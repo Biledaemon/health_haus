@@ -12,6 +12,7 @@
     <div class="col">
       <h3>Your Information</h3>
       <ul>
+        <p><%=full_name(current_user) %></p>
         <p>E-mail: <%=@user.email %></p>
       </ul>
     </div>
@@ -26,17 +27,19 @@
   <div class="row px-5 pt-2">
     <div class="col">
       <h3>Plan Summary</h3>
-      <ul>
-        <p><i class="bi bi-house"></i> Provider: <b>Metlife</b></p>
-        <p><i class="bi bi-coin"></i> Monthly Cost: <b>$150</b></p>
-        <p><i class="bi bi-arrow-up-square"></i> Max Amount Covered: <b>$800</b></p>
-        <p><i class="bi bi-scissors"></i> Deductible: <b>$80</b></p>
-        <p><i class="bi bi-bandaid"></i> Coverage: <b>95%</b></p>
-
-      </ul>
+      <% @user.contracts.each do |contract|  %>
+        <ul>
+          <p><i class="bi bi-house"></i><b> Provider:</b> <%= contract.plan.provider %> </p>
+          <p><i class="bi bi-coin"></i> <b> Monthly Cost:</b>$<%= contract.plan.price %></p>
+          <p><i class="bi bi-arrow-up-square"></i> <b>Max Amount Covered: </b>$<%= contract.plan.max_amount %></p>
+          <p><i class="bi bi-scissors"></i> <b>Deductible:</b>$<%= contract.plan.deductible %></p>
+          <p><i class="bi bi-bandaid"></i>  <b>Coverage:</b><%= contract.plan.deductible %>%</p>
+        </ul>
+      <%end%>
     </div>
     <div class="col-md-12 text-right mt-2">
       <%= link_to "Contact a Representative", "https://calendly.com/fquintana-4/30min", class:"button-green" %>
     </div>
   </div>
 </div>
+<>
