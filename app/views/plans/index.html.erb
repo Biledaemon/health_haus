@@ -17,7 +17,7 @@
               <p>Deductible: <strong>$<%= plan.deductible %></strong></p>
               <p>Coverage: <strong><%= plan.coverage_percent %>%</strong></p>
               <div class="plan-card-action p-1" style="justify-items: end;">
-                <%= link_to 'View Details', plan_path(plan), class: "button-green" %>
+                <%= link_to 'View Details', plan_path(plan, ids:"#{@plans.map{|p| p.id}.join(',')}"), class: "button-green" %>
               </div>
             </div>
           </div>
