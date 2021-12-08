@@ -12,6 +12,25 @@
   &:hover {
     background-color: #C679A6;
     color: white;
+    text-decoration: none;
+  }
+}
+
+.button-green-large {
+  padding:12px 30px;
+	border-radius:8px;
+	font-size:19px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+	color:#21496F;
+  background: #E0EEA8;
+  margin-top: 20px;
+  transition: color 0.2s;
+  &:hover {
+    background-color: #C679A6;
+    color: white;
+    text-decoration: none;
   }
 }
 

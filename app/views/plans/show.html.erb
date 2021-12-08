@@ -1,56 +1,64 @@
-<div class="container">
-  <div class="header mt-5 mw-100">
-    <h2>Your Plan</h2>
-  </div>
-    <div class="grid align-items-start mb-3 g-col-6">
-      <div class="card-body">
-        <h5 style= "font-family: 'Roboto', sans-serif; font-weight: 700;"><%= @plan.provider %></h5>
-        <h5 style= "font-family: 'Roboto', sans-serif; font-weight: 300;">Gold Elite 2000 Plan</h5>
+<div class="banner-4">
+  <div class="container">
+    <div class="p-3 px-5" style="background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+      <div class="header mt-5 mw-100">
+        <h2>Your Plan</h2>
       </div>
-    </div>
+        <div class="row grid mb-3">
+          <div>
+            <p> <%= image_tag "https://res.cloudinary.com/hugeyeti/image/upload/v1638985792/Health%20Haus/icon-stethoscope_ptuthp.svg", style: "height: 60px"%> </p>
+          </div>
+          <div>
+            <h5 style= "font-family: 'Roboto', sans-serif; font-weight: 700; color: #212529"><%= @plan.provider %></h5>
+            <h5 style= "font-family: 'Roboto', sans-serif; font-weight: 300; color: #212529">Gold Elite 2000 Plan</h5>
+          </div>
+        </div>
 
-    <div class="g-col-6">
-      <div class="card-body-show pt-4 mb-4">
-        <h5 class="card-title" style= "font-family: 'Roboto', sans-serif; font-weight: 700;"><strong>$<%= @plan.price %> per month</strong></h5>
-        <ul style= "font-family: 'Roboto', sans-serif; font-weight: 300;">
-          <li> Max Amount Covered: $<%= @plan.max_amount %> </li>
-          <li> Deductible: $<%= @plan.deductible %> </li>
-          <li> Coverage: <%= @plan.coverage_percent %> </li>
-        </ul>
-        <div class="plan-card-action">
-         <%= link_to 'Review Contract', new_plan_contract_path(@plan), id:"new-contract", class: "button-green" %>
+        <div class="g-col-6">
+          <div class="pt-4 mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+            <h5 class="card-title" style= "font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 24px; color: #212529"><strong>$<%= @plan.price %> per month</strong></h5>
+            <ul style= "font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 19px; color: #212529">
+              <li> Max Amount Covered: $<%= @plan.max_amount %> </li>
+              <li> Deductible: $<%= @plan.deductible %> </li>
+              <li> Coverage: <%= @plan.coverage_percent %>% </li>
+            </ul>
+            <div class="plan-card-action">
+            <p style= "font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; color: #C2D673">Ready to sign?</p>
+            <%= link_to 'Review Contract', new_plan_contract_path(@plan), id:"new-contract", class: "button-green-large" %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <h2>The Fine Print</h2>
+<div class="container mt-5">
+  <h2 class= "mb-4">The Fine Print</h2>
   <div class="row">
     <div class="col">
-      <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+      <div class="card mb-4 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
         <div class="card-header"> <strong>Eyes</strong> 🤓</div>
           <div class="card-body text-secondary">
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            <p class="card-text"><b>Glasses</b> are covered up to $400. <b>Lenses</b> are reimbursed up to $200 per year. Up to $800 is covered for <b>eye surgery.</b></p>
           </div>
         </div>
       </div>
 
       <div class="col">
-        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <div class="card mb-4 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
           <div class="card-header"><strong>Dentist</strong> 😁</div>
             <div class="card-body text-secondary">
-              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+              <p class="card-text"><b>Two dental consultations</b> are fully reimbursed each year. <b>Orthodontics</b> is covered up to <b>$2,500.</b> Implants and crowns are covered.</p>
             </div>
           </div>
         </div>
 
       <div class="col">
-        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <div class="card mb-4 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
           <div class="card-header"><strong>Specialists</strong> 🕵️‍♂️</div>
             <div class="card-body text-secondary">
-              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+              <p class="card-text">Consultations with <b>specialist doctors</b> (cardiologists, neurologists, pediatricians, etc.) are fully reimbursed up to <b>$250.</b></p>
             </div>
           </div>
         </div>
@@ -61,28 +69,28 @@
 <div class="container">
   <div class="row">
       <div class="col">
-        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <div class="card mb-4 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
           <div class="card-header"><strong>Surgeries</strong> 👩‍⚕️</div>
             <div class="card-body text-secondary">
-              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+              <p class="card-text"><b>Surgeries</b> and medical <b>emergencies</b> are reimbursed in full. <b>Hospitalization</b> in a private room is covered up to <b>$1,000 per day.</b> Partner hospitals are fully covered.</p>
             </div>
           </div>
       </div>
 
       <div class="col">
-        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <div class="card mb-4 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
           <div class="card-header"><strong>Alternative Medicine</strong> 🌳</div>
             <div class="card-body text-secondary">
-              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+              <p class="card-text"><b>Osteopathy, chiropractic, naturopathy and acupuncture</b> are covered up to $50 per session, 6 sessions per year. Other alternative medicine practices can be consulted.</p>
             </div>
           </div>
       </div>
 
       <div class="col">
-        <div class="card mb-3 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
-          <div class="card-header"><strong>Wellness</strong> 🏃‍♀️</div>
+        <div class="card mb-4 text-center" style="max-width: 20rem; border-radius: 6px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+          <div class="card-header"><strong>Wellness</strong> 🧘🏻‍♀️</div>
             <div class="card-body text-secondary">
-              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+              <p class="card-text"><b>Therapy</b> with a psychologist or psychiatrist is covered up to $150 per session, 12 sessions per year. Up to $200 is reimbursed for <b>meditation programs</b>.</p>
             </div>
           </div>
         </div>
