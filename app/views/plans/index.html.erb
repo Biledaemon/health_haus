@@ -8,14 +8,15 @@
       <div class="card-plans" >
         <% s.each do |plan| %>
           <div class="card-plans">
-            <div class="card-body">
+            <div class="card-body text-center">
               <p><strong><%= plan.category %></strong></p>
-              <p>Provider: <strong><%= plan.provider %></strong></p>
+              <p><strong> 🏢 <%= plan.provider %></strong></p>
+              <hr>
               <p>Monthly Cost: <strong>$<%= plan.price %></strong></p>
               <p>Max Amount Covered: <strong>$<%= plan.max_amount %></strong></p>
               <p>Deductible: <strong>$<%= plan.deductible %></strong></p>
               <p>Coverage: <strong><%= plan.coverage_percent %>%</strong></p>
-              <div class="plan-card-action" style="justify-items: end;">
+              <div class="plan-card-action p-1" style="justify-items: end;">
                 <%= link_to 'View Details', plan_path(plan), class: "button-green" %>
               </div>
             </div>
