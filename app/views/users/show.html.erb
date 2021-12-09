@@ -30,11 +30,11 @@
 
       <% @user.contracts.each do |contract|  %>
         <ul>
-          <p><i class="bi bi-house"></i><b> Provider:</b> <%= contract.plan.provider %> </p>
-          <p><i class="bi bi-coin"></i> <b> Monthly Cost:</b>$<%= contract.plan.price %></p>
-          <p><i class="bi bi-arrow-up-square"></i> <b>Max Amount Covered: </b>$<%= contract.plan.max_amount %></p>
-          <p><i class="bi bi-scissors"></i> <b>Deductible:</b>$<%= contract.plan.deductible %></p>
-          <p><i class="bi bi-bandaid"></i>  <b>Coverage:</b><%= contract.plan.deductible %>%</p>
+          <p>🏥 <b>Provider:</b> <%= contract.plan.provider %> </p>
+          <p>💵 <b>Monthly Cost:</b>$<%= contract.plan.price %></p>
+          <p>🚑 <b>Max Amount Covered: </b>$<%= contract.plan.max_amount %></p>
+          <p>🧾 <b>Deductible:</b>$<%= contract.plan.deductible %></p>
+          <p>🩹 <b>Coverage:</b><%= contract.plan.deductible %>%</p>
         </ul>
       <%end%>
     </div>
