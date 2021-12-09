@@ -34,7 +34,7 @@ class PlansController < ApplicationController
     @plans = Plan.all
     if search_params[:price].present? && search_params[:coverage_percent].present? && search_params[:max_amount].present? && search_params[:deductible].present?
       # @plans = @plans.by_price(params[:plan][:price])
-      @plans = @plans.where(search_params)
+      @plans = @plans.where('price <= ?', params[:plan][:price].to_i).where('coverage_percent >= ?', params[:plan][:coverage_percent].to_i).where('max_amount >= ?', params[:plan][:max_amount].to_i).where('deductible <= ?', params[:plan][:deductible].to_i)
       render 'index'
     else
       flash.alert = 'Please pass all 4 required inputs'
