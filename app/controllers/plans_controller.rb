@@ -54,7 +54,7 @@ class PlansController < ApplicationController
   end
 
   def search_params
-    params.require(:plan).permit(:price, :max_amount, :coverage_percent, :deductible).to_h
+    @search_params ||= params.require(:plan).permit(:price, :max_amount, :coverage_percent, :deductible).to_h
   end
 
   def cast_search_params
