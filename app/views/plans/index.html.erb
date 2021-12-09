@@ -12,6 +12,7 @@
               <p><strong><%= plan.category %></strong></p>
               <p style= "font-family: 'Poppins', sans-serif; font-weight: 900; color: #212529"><strong> 🏥 <%= plan.provider %></strong></p>
               <hr>
+
               <div>
                 <p class="align-left">💵 Monthly Cost:</p>
                 <h4 class="align-right">$<%= plan.price %> </h4>
@@ -34,6 +35,7 @@
               </div>
               <div class="plan-card-action d-flex justify-content-center">
                 <%= link_to 'View Details', plan_path(plan), class: "button-card-index" %>
+
               </div>
             </div>
           </div>

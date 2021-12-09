@@ -1,50 +1,50 @@
 provider,price,max_amount,deductible,coverage_percent
-MetLife,28.347,100,2,60
-Integramédica,13.885,25,0,60
-Consorcio,22.858,0,0,100
-MetLife,15.807,100,2,60
-Santa María,38.816,300,0,100
-Indisa,36.718,250,0,100
-MetLife,7.612,100,2,60
-MetLife,36.027,350,2,70
-Las Cons,13.885,5,65,100
-MetLife,12.793,3,0,40
-Las Cons,6.788,7,50,50
-Southbridge,9.874,5,0,100
-MetLife,11.808,3,0,40
-Redsalud,23.614,60,0,50
-Bice Vida,14.637,5,0,50
-MetLife,12.185,100,2,60
-MetLife,14.999,3,0,40
-Integramédica,10.491,25,0,85
-MetLife,11.253,100,2,60
-Ans Concepción,13.7,3,0,100
-Recover,14.687,2,0,50
-Southbridge,3.086,150,0,100
-Southbridge,9.565,3,0,100
-U. De Los Ans,5.083,800,0,100
-Alemana,3.688,0,0,100
-Las Cons,6.25,800,0,100
-Indisa,10.491,5,0,100
-Cencosud,18.822,3,0,50
-Las Cons,36.101,5,65,100
-Clínica Bupa Reñaca,2.933,800,0,100
-Clínica Bupa Santiago,2.933,800,0,100
-Vida Cámara,28.398,5,1,0
-Vida Cámara,26.169,5,1,0
-Vida Cámara,23.973,5,1,0
-Clínica Nicolás Troncoso,9.257,120,0,60
-Ans Chillán,13.7,3,0,100
-Las Cons,5.245,7,50,50
-Indisa,3.75,0,0,100
-Santa María,15.983,50,0,100
-Southbridge,7.405,3,0,100
-Las Cons,9.0,800,0,100
-Sura,5.415,0,0,100
-Falabella,16.045,10,0,100
-Bupa Global,19.5,20,3,80
-Access One,24.19,10,2,100
-Best Doctors,28.20,3,0,100
-Bupa Global,14.6,5,2,100
-A+ International Healthcare,11.56,45,0,80
-A+ International Healthcare,20.11,40,20,100
+MetLife,338,368084,736,80
+Integramédica,165,92021,92,80
+Consorcio,272,73617,184,100
+MetLife,188,368084,736,80
+Santa María,463,1104252,0,100
+Indisa,438,920210,0,100
+MetLife,91,368084,736,80
+MetLife,429,1288294,736,85
+Las Cons,165,18404,23925,100
+MetLife,152,11043,736,70
+Las Cons,81,25766,18404,75
+Southbridge,118,18404,1840,100
+MetLife,141,11043,1472,70
+Redsalud,281,220850,736,75
+Bice Vida,174,18404,1472,75
+MetLife,145,368084,736,80
+MetLife,179,11043,1472,70
+Integramédica,125,92021,1840,90
+MetLife,134,368084,736,80
+Ans Concepción,163,11043,1840,100
+Recover,175,7362,1472,75
+Southbridge,37,552126,11043,100
+Southbridge,114,11043,1840,100
+U. De Los Ans,61,2944671,3681,100
+Alemana,44,1840420,3681,100
+Las Cons,74,2944671,3681,100
+Indisa,125,18404,5521,100
+Cencosud,224,11043,3681,75
+Las Cons,430,18404,23925,100
+Clínica Bupa Reñaca,35,2944671,11043,100
+Clínica Bupa Santiago,35,2944671,9202,100
+Vida Cámara,338,18404,368,70
+Vida Cámara,312,18404,368,70
+Vida Cámara,286,18404,5521,70
+Clínica Nicolás Troncoso,110,441701,3681,80
+Ans Chillán,163,11043,3681,100
+Las Cons,63,25766,18404,75
+Indisa,45,184042,9202,100
+Santa María,191,184042,736,100
+Southbridge,88,11043,1104,100
+Las Cons,107,2944671,500,100
+Sura,65,27143,195000,75
+Falabella,191,36808,736,100
+Bupa Global,232,73617,1104,80
+Access One,288,36808,736,100
+Best Doctors,336,11043,0,100
+Bupa Global,174,18404,736,100
+A+ International Healthcare,138,165638,0,80
+A+ International Healthcare,240,147234,7362,100
