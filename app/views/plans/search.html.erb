@@ -9,10 +9,10 @@
               <hr>
               <div class="form">
                 <%= simple_form_for(@plan, url: search_results_plans_path) do |f| %>
-                  <%= f.input :price, as: :integer, label: "1. How much do you want to pay each month?", placeholder: 'Monthly price' %>
-                  <%= f.input :max_amount, label: "2. Up to how much do you want to be covered?", placeholder: 'Maximum coverage' %>
-                  <%= f.input :deductible, label: "3. How much do you want to pay as a deductible?",placeholder: 'Deductible' %>
-                  <%= f.input :coverage_percent, label:"4. Do you want 100% coverage or up to how much?", placeholder: 'Total coverage, in percent', collection: 75..100, id: "example"  %>
+                  <%= f.input :price, as: :integer, label: "1. How much do you want to pay each month?", as: :radio_buttons, collection: [['$1 - $100',1..100], ['$101 - $200',101..200], ['$201 - $300',201..300], ['$301 - $400',301..400], ['$401 - $500',401..500]] %>
+                  <%= f.input :max_amount, label: "2. Up to how much do you want to be covered?",as: :radio_buttons, collection: [['$5.000 - $30.000',5000..30000], ['$30.001 - $150.000',30001..150000], ['$150.001 - $500.000',150001..500000], ['$500.001 - $1.000.000',500001..1000000], ['$1.000.001 - $3.000.000',1000001..3000000]] %>
+                  <%= f.input :deductible, label: "3. How much do you want to pay as a deductible?", as: :radio_buttons, collection: [['$0- $200',0..200], ['$201 - $1.000',201..1000], ['$1.001 - $4.000',1001..4000], ['$4.001 - $10.000',4001..10000], ['$10.001 - $200.000',10001..200000]] %>
+                  <%= f.input :coverage_percent, label:"4. How much insurance coverage do you want?", as: :radio_buttons, collection: [['70% - 80%',70..80], ['81% - 90%',81..90], ['91% - 100%',91..100]] %>
                   <button type="button" class="btn button-green" data-toggle="modal" data-target="#exampleModal">
                     Search Plans
                   </button>
@@ -26,7 +26,7 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          <p> 🎉 We found <strong>6</strong> plan options that match your needs!</p>
+                          <p> 🎉 We found some plan options that match your needs!</p>
                         </div>
                         <div class="modal-footer">
                           <%= f.submit "Go to Plans", class: "btn button-green"%>
