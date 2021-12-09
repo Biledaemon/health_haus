@@ -18,6 +18,10 @@
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s;
+  &:hover {
+    background-color: #9BCED2;
+  }
 }
 
 .card-body-show {
@@ -43,7 +47,7 @@
 
 .card-body {
   font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .category-icons {
@@ -89,4 +93,11 @@
   margin-top: 40px;
   padding: 20px 0px 30px;
   width: 50%;
+}
+
+.align-left {
+  float: left;
+}
+.align-right {
+	float: right;
 }

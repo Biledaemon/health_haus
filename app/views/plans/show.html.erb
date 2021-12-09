@@ -16,8 +16,8 @@
 
         <div class="g-col-6">
           <div class="pt-4 mb-4" style="display: flex; justify-content: space-between; align-items: center;">
-            <h5 class="card-title" style= "font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 24px; color: #212529"><strong>$<%= @plan.price %> per month</strong></h5>
-            <ul style= "font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 19px; color: #212529">
+            <h5 class="card-title" style= "font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 24px; color: #212529"><strong>$<%= @plan.price %> per month</strong></h5>
+            <ul style= "font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 19px; color: #212529">
               <li> Max Amount Covered: $<%= @plan.max_amount %> </li>
               <li> Deductible: $<%= @plan.deductible %> </li>
               <li> Coverage: <%= @plan.coverage_percent %>% </li>
@@ -98,7 +98,7 @@
   </div>
    <div class="container">
       <div class="row mt-2 mb-3 text-center" style="max-width: 18rem;">
-        <%= link_to 'Back to Results', plans_path, class: "button-green" %>
+        <%= link_to 'Back to my Results', search_results_plans_path(ids: params[:ids]), method: :post, class: "button-green" %>
     </div>
   </div>
 </div>
