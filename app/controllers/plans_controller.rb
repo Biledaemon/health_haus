@@ -32,15 +32,15 @@ class PlansController < ApplicationController
     cast_search_params
     session["results"] = "user_results"
     @plans = Plan.all
-    if params[:plan][:price].present? && params[:plan][:coverage_percent].present? && params[:plan][:max_amount].present? && params[:plan][:deductible].present?
-       
-        @plans = @plans.where('price <= ?', params[:plan][:price].to_i).where('coverage_percent >= ?', params[:plan][:coverage_percent].to_i).where('max_amount >= ?', params[:plan][:max_amount].to_i).where('deductible <= ?', params[:plan][:deductible].to_i)
-        render 'index'
-     else
-       flash.alert = 'Please pass all 4 required inputs'
-        render :search
-        # render 'search', notice: 'Please pass all 4 required inputs'
-     end
+    if search_params[:price].present? && search_params[:coverage_percent].present? && search_params[:max_amount].present? && search_params[:deductible].present?
+      # @plans = @plans.by_price(params[:plan][:price])
+      @plans = @plans.where('price <= ?', params[:plan][:price].to_i).where('coverage_percent >= ?', params[:plan][:coverage_percent].to_i).where('max_amount >= ?', params[:plan][:max_amount].to_i).where('deductible <= ?', params[:plan][:deductible].to_i)
+      render 'index'
+    else
+      flash.alert = 'Please pass all 4 required inputs'
+      render :search
+      # render 'search', notice: 'Please pass all 4 required inputs'
+    end
   end
 
 
