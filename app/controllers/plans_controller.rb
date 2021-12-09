@@ -29,11 +29,12 @@ class PlansController < ApplicationController
   end
 
   def search_results
+    cast_search_params
     session["results"] = "user_results"
     @plans = Plan.all
-    if params[:plan][:price].present? && params[:plan][:coverage_percent].present? && params[:plan][:max_amount].present? && params[:plan][:deductible].present?
+    if search_params[:price].present? && search_params[:coverage_percent].present? && search_params[:max_amount].present? && search_params[:deductible].present?
       # @plans = @plans.by_price(params[:plan][:price])
-      @plans = @plans.where('price >= ?', params[:plan][:price].to_i).where('coverage_percent >= ?', params[:plan][:coverage_percent].to_i).where('max_amount >= ?', params[:plan][:max_amount].to_i).where('deductible >= ?', params[:plan][:deductible].to_i)
+      @plans = @plans.where(search_params)
       render 'index'
     else
       flash.alert = 'Please pass all 4 required inputs'
@@ -42,23 +43,7 @@ class PlansController < ApplicationController
     end
   end
 
-  def import
-    # Obtain the 4 params obtained from user 'Search'
-    # Scrape from queplan.cl
-    # GET the price (convert to $)
-    # GET the coverage_percent,
-    # GET the max_amount (convert to $),
-    # GET deductible (comvert to $)
-    # Create an array of plans for user (individual, couple or Family) Cron job? LIMIT = 100 plans
-  end
-
   private
-
-  # def load_csv
-  #   CSV.foreach(@csv_file) do |row|
-  #     @jobs << Plan.new(provider: row[0], price: row[1], deductible: row[2], max_amount: row[3, coverage_percent: row[4])
-  #   end
-  # end
 
   def plan_params
     params.require(:plan).permit(:price, :expiration, :max_amount, :coverage_percent, :deductible, :external_id, :provider, :description, :category)
@@ -66,5 +51,16 @@ class PlansController < ApplicationController
 
   def set_plan
     @plan = Plan.find(params[:id])
+  end
+
+  def search_params
+    params.require(:plan).permit(:price, :max_amount, :coverage_percent, :deductible).to_h
+  end
+
+  def cast_search_params
+    search_params[:price] = Range.new(*search_params[:price].scan(/\d+/).map(&:to_i))
+    search_params[:coverage_percent] = Range.new(*search_params[:coverage_percent].scan(/\d+/).map(&:to_i))
+    search_params[:max_amount] = Range.new(*search_params[:max_amount].scan(/\d+/).map(&:to_i))
+    search_params[:deductible] = Range.new(*search_params[:deductible].scan(/\d+/).map(&:to_i))
   end
 end
