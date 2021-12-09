@@ -8,16 +8,34 @@
       <div class="card-plans" >
         <% s.each do |plan| %>
           <div class="card-plans">
-            <div class="card-body text-center">
+            <div class="card-body">
               <p><strong><%= plan.category %></strong></p>
-              <p><strong> 🏢 <%= plan.provider %></strong></p>
+              <p style= "font-family: 'Poppins', sans-serif; font-weight: 900; color: #212529"><strong> 🏥 <%= plan.provider %></strong></p>
               <hr>
-              <p>Monthly Cost: <strong>$<%= plan.price %></strong></p>
-              <p>Max Amount Covered: <strong>$<%= plan.max_amount %></strong></p>
-              <p>Deductible: <strong>$<%= plan.deductible %></strong></p>
-              <p>Coverage: <strong><%= plan.coverage_percent %>%</strong></p>
-              <div class="plan-card-action p-1" style="justify-items: end;">
-                <%= link_to 'View Details', plan_path(plan, ids:"#{@plans.map{|p| p.id}.join(',')}"), class: "button-green" %>
+
+              <div>
+                <p class="align-left">💵 Monthly Cost:</p>
+                <h4 class="align-right">$<%= plan.price %> </h4>
+                <div style="clear: both;"></div>
+              </div>
+              <div>
+                <p class="align-left">🚑 Max Amount Covered: </p>
+                <h4 class="align-right">$<%= plan.max_amount %> </h4>
+                <div style="clear: both;"></div>
+              </div>
+              <div>
+                <p class="align-left">🧾 Deductible: </p>
+                <h4 class="align-right">$<%= plan.deductible %> </h4>
+                <div style="clear: both;"></div>
+              </div>
+              <div>
+                <p class="align-left">🩹 Coverage: </p>
+                <h4 class="align-right">$<%= plan.coverage_percent %> </h4>
+                <div style="clear: both;"></div>
+              </div>
+              <div class="plan-card-action d-flex justify-content-center">
+                <%= link_to 'View Details', plan_path(plan), class: "button-card-index" %>
+
               </div>
             </div>
           </div>
