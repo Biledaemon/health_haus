@@ -61,19 +61,19 @@
 
        <div class="plan-card-action">
           <button type="button" class="btn button-green-large" data-toggle="modal" data-target="#exampleModal">
-            Get Insurance
+            Pay & Get Insurance
           </button>
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"> <strong>Status</strong></h5>
+                  <h5 class="modal-title" id="exampleModalLabel"> <strong>Payment Successful 💳🎉</strong></h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Yay! 🎉 you successfully signed in your Contract</p>
+                  <p>Congratulations, you are now part of Health Haus!</p>
                 </div>
                 <div class="modal-footer">
                   <%= link_to 'Go to Profile', plan_contracts_path(@plan), method: :post, id:"create-contract", class: "btn button-green" %>
