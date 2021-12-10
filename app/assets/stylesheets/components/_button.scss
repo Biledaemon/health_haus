@@ -1,66 +1,83 @@
 .button-green {
-  padding:10px 29px;
-	border-radius:6px;
-	font-size: 18px;
+  padding: 10px 29px;
+  border-radius: 6px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-	color:#21496F;
-  background: #E0EEA8;
+  font-family: "Roboto", sans-serif;
+  color: #21496f;
+  background: #e0eea8;
   margin-top: 20px;
   transition: color 0.2s;
   &:hover {
-    background-color: #C679A6;
+    background-color: #c679a6;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.button-pink {
+  padding: 10px 29px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background: #c679a6;
+  margin-top: 20px;
+  transition: color 0.2s;
+  &:hover {
+    background-color: #b4cfe4;
     color: white;
     text-decoration: none;
   }
 }
 
 .button-card-index {
-  padding:9px 28px;
-	border-radius:6px;
-	font-size: 14px;
+  padding: 9px 28px;
+  border-radius: 6px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-	color:#21496F;
-  background: #E0EEA8;
+  font-family: "Roboto", sans-serif;
+  color: #21496f;
+  background: #e0eea8;
   margin-top: 20px;
   transition: color 0.2s;
   &:hover {
     background-color: #c6d48b;
-    color:#1b4265;
+    color: #1b4265;
     text-decoration: none;
   }
 }
 
 .button-green-large {
-  padding:12px 30px;
-	border-radius:8px;
-	font-size:19px;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 19px;
   font-weight: bold;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-	color:#21496F;
-  background: #E0EEA8;
+  font-family: "Roboto", sans-serif;
+  color: #21496f;
+  background: #e0eea8;
   margin-top: 20px;
   transition: color 0.2s;
   &:hover {
-    background-color: #C679A6;
+    background-color: #c679a6;
     color: white;
     text-decoration: none;
   }
 }
 
-
 .button-transparent {
-  padding:10px 24px;
-	border-radius:6px;
-	font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-	color:#21496F;
+  font-family: "Roboto", sans-serif;
+  color: #21496f;
   background: white;
   width: 120px;
   height: 48px;
@@ -69,21 +86,21 @@
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color:#21496F;
+  color: #21496f;
 }
 
 h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
-  color:#21496F;
+  color: #21496f;
   font-size: 21px;
 }
 
 h4 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
-  color:#21496F;
+  color: #21496f;
   font-size: 18px;
 }
