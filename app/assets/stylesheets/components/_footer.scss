@@ -8,6 +8,9 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
+.footer-container {
+   margin-top: auto;
+}
 .footer-links {
   display: flex;
   align-items: center;
@@ -24,4 +27,9 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
